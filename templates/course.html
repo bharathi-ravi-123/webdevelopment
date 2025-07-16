@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/course.css') }}">
+    <title>Course details</title>
+</head>
+<body>
+    <nav class="topnav">
+  <div class="nav-left">
+    <a href="{{ url_for('dashboard') }}">HOME</a>
+    <a href="{{ url_for('course') }}">COURSE</a>
+    <a href="{{ url_for('about') }}">ABOUT</a>
+    <a href="{{ url_for('contact') }}">CONTACT US</a>
+  </div>
+  <div class="nav-right">
+    <form method="POST" action="{{ url_for('logout') }}">
+      <button type="submit">LOGOUT</button>
+    </form>
+  </div>
+</nav>
+ 
+    <div class="bodyimg">
+
+     <img src="{{ url_for('static', filename='images/coursebackimg.png') }}" alt="college" class="collegeimg">
+ 
+  </div>
+ 
+  <div class="course-container">
+    <h2>Available Courses</h2>
+    <table>
+      <thead>
+        <tr>
+          <th>Subject Name</th>
+          <th>Discipline</th>
+          <th>SME Name</th>
+          <th>Institute</th>
+          <th>Course Duration</th>
+          <th>Price</th>
+          <th>Apply</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td><a href="#">Web Development</a></td>
+          <td>Special Series</td>
+          <td>Ms.Meenashi </td>
+          <td>Tagore Trust</td>
+          <td>3 Months</td>
+          <td>4599/-</td>
+          <td>
+           <form method="GET" action="{{ url_for('payment', course='Web Development') }}">
+                      <button type="submit" class="register-btn" onclick="registerClickEffect(this)">Register</button>
+            </form>
+          </td>
+
+
+        </tr>
+        <tr>
+          <td><a href="#">UI & UX Design</a></td>
+          <td>Computer Science and Engineering</td>
+          <td>Mrs.Jayanthi</td>
+          <td>Tagore Trust</td>
+          <td>2 Months</td>
+          <td>3999/-</td>
+          <td>
+           <form method="GET" action="{{ url_for('payment', course='UI & UX Design') }}">
+             <button type="submit" class="register-btn" onclick="registerClickEffect(this)">Register</button>
+           </form>
+          </td>
+
+        </tr>
+        <tr>
+          <td><a href="#">AIML</a></td>
+          <td>Information Technology</td>
+          <td>Prof. Dhanapal</td>
+          <td>Tagore Trust</td>
+          <td>4 Months</td>
+          <td>5999/-</td>
+          <td><a href="{{ url_for('payment', course='AIML') }}">
+            <button type="submit" class="register-btn" onclick="registerClickEffect(this)">Register</button></a></td>
+        </tr>
+        <tr>
+            <td><a href="#">Digital Marketing</a></td>
+            <td>Computer Science and Engineering</td>
+            <td>prof.Surendran</td>
+            <td>Tagore Enginerring college</td>
+            <td>2 Months</td>
+            <td>1999/-</td>
+            <td><a href="{{ url_for('payment', course='Digital Marketing') }}"><button type="submit" class="register-btn" onclick="registerClickEffect(this)">Register</button></a></td>
+            
+
+        </tr>
+        <tr>
+          <td><a href="#">Cyber Security</a></td>
+          <td>Information Technology</td>
+          <td>Mrs.Rajalakshmi</td>
+          <td>Tagore Trust</td>
+          <td>3 Months</td>
+          <td>1299/-</td>
+          <td><a href="{{ url_for('payment', course='Cyber Security') }}"><button type="submit" class="register-btn" onclick="registerClickEffect(this)">Register</button></a></td>
+          
+
+        </tr>
+         <tr>
+          <td><a href="#">Data Science</a></td>
+          <td>Computer Science and Engineering</td>
+          <td>Mrs.Mercy</td>
+          <td>Tagore Enginerring College</td>
+          <td>6 Months</td>
+          <td>5999/-</td>
+          <td><a href="{{ url_for('payment', course='Data Science') }}"><button type="submit" class="register-btn" onclick="registerClickEffect(this)">Register</button></a></td>
+          
+
+        </tr>
+         <tr>
+          <td><a href="#">Power BI</a></td>
+          <td>Information Technology</td>
+          <td>Prof.Kannan</td>
+          <td>Tagore Trust</td>
+          <td>2 Months</td>
+          <td>1599/-</td>
+          <td><a href="{{ url_for('payment', course='Power BI') }}"><button type="submit" class="register-btn" onclick="registerClickEffect(this)">Register</button></a></td>
+
+
+        </tr>
+         <tr>
+          <td><a href="#">Advance Python</a></td>
+          <td>Computer Science and Engineering</td>
+          <td>Mrs.k.Aswini</td>
+          <td>Tagore Trust</td>
+          <td>3 Months</td>
+          <td>1999/-</td>
+          <td><a href="{{ url_for('payment', course='Advance Python') }}"><button type="submit" class="register-btn" onclick="registerClickEffect(this)">Register</button></a></td>
+          
+
+        </tr>
+        <tr>
+          <td><a href="#">Deep Learning</a></td>
+          <td>Information Technology</td>
+          <td>Mrs.Rajalakshmi</td>
+          <td>Tagore Trust</td>
+          <td>1 Months</td>
+          <td>7999/-</td>
+          <td><a href="{{ url_for('payment', course='Deep Learning') }}"><button type="submit" class="register-btn" onclick="registerClickEffect(this)">Register</button></a></td>
+          
+
+        </tr>
+      </tbody>
+    </table>
+  </div>
+
+</body>
+</html>

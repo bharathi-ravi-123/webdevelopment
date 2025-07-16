@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html>
+ <head>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+        <title>register</title>
+        
+     
+        <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='css/register.css') }}">
+ </head>
+
+  <div class="bodyimg"></div>
+<div class="overlay"></div>
+
+<header class="tophead">
+  <img src="{{ url_for('static', filename='images/tagore-logo.png') }}" alt="Tagore Logo" class="logo" />
+</header>
+
+{% with messages = get_flashed_messages(with_categories=true) %}
+  {% if messages %}
+    <ul class="flashes">
+      {% for category, message in messages %}
+        {% if category != 'success' %}
+          <li class="{{ category }}">{{ message }}</li>
+        {% endif %}
+      {% endfor %}
+    </ul>
+  {% endif %}
+{% endwith %}
+
+
+
+<form id="myform" action="{{ url_for('register') }}" method="POST">
+  <h2 style="color: red;">REGISTER</h2>
+
+  <label for="fname">Name</label>
+  <input type="text" id="fname" name="fname" required placeholder="Enter Name" />
+
+  <label for="mail">Email ID</label>
+  <input type="email" id="mail" name="mail" required placeholder="Enter mail id" />
+  <span id="emailFeedback"></span>
+
+  <label for="passw">Password</label>
+  <input type="password" id="passw" name="passw" required placeholder="Set password" />
+  <span id="passFeedback"></span>
+
+  <input type="submit" value="submit" />
+</form>
+
+<p class="sign">Do you have an account <a href="/login" target="_blank">Login</a></p>
+
+<script>
+  const registeredEmails = {{ registered_emails | tojson | safe }};
+  console.log("Loaded emails:", registeredEmails);
+</script>
+
+<script src="{{ url_for('static', filename='js/validation.js') }}"></script>
+
+</html>

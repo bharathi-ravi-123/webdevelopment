@@ -1,0 +1,62 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    background: #f9f9f9;
+}
+
+.checkout-container {
+    display: flex;
+    padding: 40px;
+    max-width: 1000px;
+    margin: auto;
+    gap: 30px;
+}
+
+.left, .right {
+    background: white;
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px #ccc;
+}
+
+.left {
+    flex: 2;
+}
+
+.right {
+    flex: 1;
+}
+
+input, select {
+    width: 100%;
+    padding: 10px;
+    margin-top: 10px;
+    margin-bottom: 20px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+button {
+    width: 100%;
+    padding: 15px;
+    font-size: 18px;
+    background-color: #805ad5;
+    color: white;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #6b46c1;
+}
+
+.info {
+    font-size: 12px;
+    margin-top: 10px;
+    color: #777;
+}
+
+hr {
+    margin: 10px 0;
+}

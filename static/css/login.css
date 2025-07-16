@@ -1,0 +1,170 @@
+body {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+    background-color: transparent;
+    height: 100vh;
+    overflow: hidden;
+    position: relative;
+}
+
+.bodyimg {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image: url('../images/college.png');
+    background-size: cover;
+    background-position: center;
+    filter: blur(4px);
+    z-index: -2;
+}
+
+.overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.4);
+    z-index: -1;
+}
+
+.container {
+    position: absolute;
+    top: 60%;
+    right: 5%;
+    transform: translateY(-50%);
+    width: 350px;
+    background-color: rgba(255, 255, 255, 0.95);
+    padding: 30px 40px;
+    border: 2px solid black;
+    border-radius: 15px;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.4);
+    z-index: 2;
+}
+
+h1 {
+    margin-top: 0;
+    margin-bottom: 25px;
+    font-size: 28px;
+    font-weight: bold;
+    color: #b40000;
+    text-align: center;
+}
+
+form {
+    text-align: left;
+}
+
+form label {
+    display: block;
+    margin-bottom: 5px;
+    font-weight: bold;
+    color: #2c2c2c;
+}
+
+form input[type="email"],
+form input[type="password"] {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 15px;
+    border-radius: 8px;
+    border: 1px solid #ccc;
+    box-sizing: border-box;
+}
+
+input[type="submit"] {
+    width: 100%;
+    padding: 10px;
+    font-weight: bold;
+    background-color: #b40000;
+    color: white;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+}
+
+input[type="submit"]:hover {
+    background-color: #8e0000;
+}
+
+#errormsg {
+    text-align: center;
+}
+
+.register-link {
+    text-align: center;
+    margin-top: 15px;
+}
+
+.flashes {
+    list-style: none;
+    padding: 0;
+    margin-bottom: 20px;
+}
+
+.flashes li.success {
+    color: green;
+    font-weight: bold;
+    font-size: 18px;
+}
+
+.flashes li.error {
+    color: red;
+    font-weight: bold;
+    font-size: 16px;
+}
+
+.tophead {
+  display: flex;
+  align-items: center;
+  padding: 20px 400px;
+  position: sticky;
+  top: 0;
+  background: rgba(255, 255, 255, 0.85);
+  z-index: 5;
+  border-bottom: 1px solid #ccc;
+}
+
+.logo {
+  height: 80px;
+  margin-right: 20px;
+  left: 100px;
+
+}
+
+    .content {
+      position: absolute;
+      top: 50%;
+      left: 30%;
+      transform: translate(-50%, -50%);
+      text-align: left;
+      color: white;
+      z-index: 2;
+      max-width: 700px;
+    }
+
+    .content h2 {
+      font-size: 28px;
+      margin-bottom: 15px;
+    }
+
+    .content p {
+      font-size: 16px;
+      line-height: 1.6;
+    }
+
+    @media (max-width: 768px) {
+      .container {
+        right: 2%;
+        left: 2%;
+        width: auto;
+      }
+      .content {
+        top: 65%;
+        transform: translate(-50%, -35%);
+        padding: 10px;
+      }
+    }

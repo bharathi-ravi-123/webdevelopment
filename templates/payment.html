@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Checkout</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/payment.css') }}">
+</head>
+<body>
+
+<div class="checkout-container">
+    <div class="left">
+        <h2>Billing address & Payment method</h2>
+        <form id="paymentForm">
+            <label>Country</label>
+            <select required>
+                <option value="India">India</option>
+                <option value="US">US</option>
+                <option value="China">China</option>
+                <option value="Europe">Europe</option>
+            </select>
+
+            <label>State / Union Territory</label>
+            <select required>
+                <option value="">Select</option>
+                <option>Tamil Nadu</option>
+                <option>Kerala</option>
+                <option>Others</option>
+            </select>
+
+            <h3>Enter your details</h3>
+            <input type="text" id="studentName" placeholder="Name on card" required>
+            <input type="email" id="studentEmail" placeholder="Email" required>
+        </form>
+    </div>
+
+<div class="right">
+    <h3>Order Summary</h3>
+    <p><strong>Course:</strong> <span id="courseName">Loading...</span></p>
+    <p><strong>Price:</strong> ₹<span id="price">0</span></p>
+    <hr>
+    <button type="button" id="payBtn">🔒 Pay ₹0</button>
+</div>
+   
+</div>
+
+<script src="https://checkout.razorpay.com/v1/checkout.js"></script>
+<script src="{{ url_for('static', filename='js/payment.js') }}"></script>
+
+</body>
+</html>
+

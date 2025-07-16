@@ -1,0 +1,17 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Payment Successful</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/success.css') }}">
+</head>
+<body>
+    <div class="success-box">
+        <h1>✅ Payment Successful!</h1>
+        <p>Thank you for registering. We've received your payment.</p>
+        <p>You will receive a confirmation email shortly.</p>
+        <a href="{{ url_for('dashboard') }}">Go to Dashboard</a>
+    </div>
+</body>
+</html>

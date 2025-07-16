@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About Tagore</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/about.css') }}">
+</head>
+<body>
+    <nav class="topnav">
+        <div class="nav-left">
+            <a href="{{ url_for('dashboard') }}">HOME</a>
+            <a href="{{ url_for('course') }}">COURSE</a>
+            <a href="{{ url_for('about') }}">ABOUT</a>
+            <a href="{{ url_for('contact') }}">CONTACT US</a>
+        </div>
+        <div class="nav-right">
+            <form action="{{ url_for('logout') }}" method="get" style="display:inline;">
+                <button type="submit">LOGOUT</button>
+            </form>
+        </div>
+    </nav>
+
+    <div class="about-container">
+        <div class="about-image">
+            <img src="{{ url_for('static', filename='images/college-about.png') }}" alt="college" class="collegeimg">
+        </div>
+    
+    <div class="bodyimg">
+
+     <img src="{{ url_for('static', filename='images/tagore-engg.png') }}" alt="college" class="collegeimg">
+ 
+  </div>
+        <div class="about-content">
+            <h2>ABOUT US</h2>
+            <p>
+                At Tagore Engineering College, we take pride in offering future-ready courses that empower students to thrive in today's fast-paced technological world. Our curriculum spans core disciplines such as Computer Science, Electronics & Communication, Mechanical, Civil, Electrical & Electronics, Artificial Intelligence, and Business Administration.
+            </p>
+            <p>
+                Each program is designed not only to provide strong academic foundations but also to equip students with industry-relevant skills, hands-on experience, and critical thinking abilities. Whether pursuing undergraduate or postgraduate education, our students are mentored by dedicated faculty and supported by modern labs, innovation centers, and career development resources.
+            </p>
+            <p>
+                Driven by the motto <em>"Knowledge is power"</em>, Tagore Engineering College is committed to producing confident, competent professionals who are ready to meet the challenges of the global job market.
+            </p>
+
+            <a href="{{ url_for('course') }}">
+                <button class="explore-btn">Explore Our Courses</button>
+            </a>
+        </div>
+    </div>
+</body>
+</html>

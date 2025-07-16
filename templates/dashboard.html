@@ -1,0 +1,60 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Dashboard</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/dashboard.css') }}">
+</head>
+<body>
+
+  <nav class="topnav">
+    <div class="nav-left">
+      <a href="{{ url_for('dashboard') }}">HOME</a>
+      <a href="{{ url_for('course') }}">COURSE</a>
+      <a href="{{ url_for('about') }}">ABOUT</a>
+      <a href="{{ url_for('contact') }}">CONTACT US</a>
+
+    </div>
+    <div class="nav-right">
+      <button onclick="logout()"> LOGOUT</button>
+    </div>
+    
+  </nav>
+
+  <header class="tophead">
+    <div class="logobox"><img src="{{ url_for('static', filename='images/tagore-logo.png') }}" alt="logo" class="logo">
+
+    </div>
+  </header>
+
+  <div class="bodyimg">
+
+     <img src="{{ url_for('static', filename='images/college.png') }}" alt="college" class="collegeimg">
+ 
+  </div>
+
+  <div class="overlay"></div>
+
+  <div class="content">
+     <h2>Explore Future-Ready Courses at Tagore Engineering College</h2>
+      <p id="cont">
+        At Tagore Engineering College, we offer diverse courses in engineering, technology, and management —
+        helping students build strong skills for the real world.
+      </p>
+      <p>
+        As the saying goes, <em>"Knowledge is power,"</em> and we believe in empowering every learner to succeed.
+      </p>
+  </div>
+
+  <div class="expl">
+    <button onclick="window.location.href='{{ url_for('course') }}'">EXPLORE</button>
+
+  </div>
+
+  
+    
+</body>
+</html>
+
+
